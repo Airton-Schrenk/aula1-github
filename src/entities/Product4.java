@@ -1,0 +1,39 @@
+package entities;
+
+public class Product4 {
+	//variáveis
+	private String name;
+	private Double price;
+	//construtor vazio
+	public Product4() {
+	}
+	//construtor com argumentos
+	public Product4(String name, Double price) {
+		this.name = name;
+		this.price = price;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public Double getPrice() {
+		return price;
+	}
+	public void setPrice(Double price) {
+		this.price = price;
+	}
+	//Metodo estático
+	public static boolean staticProductPredicate(Product4 p){
+		return p.getPrice()>=100.00;
+	}
+	public boolean nonStaticProductPredicate(){
+		return price >=100.00;
+	}
+	
+	@Override
+	public String toString() {
+		return name + ", " + String.format("%.2f", price);
+	}
+}
